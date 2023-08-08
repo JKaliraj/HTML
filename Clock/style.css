@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    width: 600px;
+    height: 300px;
+    border: 15px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main h1{
+    font-size: 150px;
+    font-family: 'Digital-7';
+}

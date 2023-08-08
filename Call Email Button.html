@@ -1,0 +1,15 @@
+<html>
+<body>
+<a href="tel:11234567890">Call us</a>
+<a href="mailto:rraju824805@gmail.com?subject=Example+subject&body=Message+text">Send email</a>
+<form id="form1" name="form1" oninput="out1.value = parseInt(in1.value, 10) + parseInt(in2.value, 10)">
+  <fieldset>
+    <legend>Output Example</legend>
+      <input type="number" id="in1" name="in1" value="0">    <br/>    +    <input type="number" id="in2" name="in2" value="0">
+  </fieldset>
+</form>
+<!--[for] attribute enables out1 to display calculations for in1 and in2.--> <!--[form] attribute designates form1 as the form owner of out1 even if it isn't a descendant.-->
+<output name="out1" for="in1 in2" form="form1">0</output> 
+<progress ::-webkit-progress-bar {  background-color: "green"; }></progress>
+</body>
+</html>

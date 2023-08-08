@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7d2ae8;
+    transition: all 0.3s ease-in-out;
+   
+}
+.toggle{
+    width: 125px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+.toggle::before{
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #7d2ae8;
+    transition: all 0.3s ease-in-out;
+}
+.toggle.active::before{
+    left: calc(100% - 60px);
+}
+body.dark .toggle.active::before{
+    background-color: rgb(46, 45, 45);
+}
+.dark{
+    background-color: rgba(0, 0, 0,0.785);
+}

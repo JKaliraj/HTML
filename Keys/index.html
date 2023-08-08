@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="keycode bcode">96</div>
+        <div class="keyname bname">A</div>
+        <div class="box">
+            <div class="keyname">Key : <span class="sname">A</span></div>
+            <div class="keycode">Code : <span class="scode">96</span></div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("keydown" , e=>{
+            let keyname = e.keyCode === 32 ? "Space" : e.key; 
+            document.querySelector(".bcode").innerText = e.keyCode; 
+            document.querySelector(".bname").innerText = keyname; 
+            document.querySelector(".scode").innerText = e.keyCode; 
+            document.querySelector(".sname").innerText = keyname; 
+        });
+    </script>
+</body>
+</html>

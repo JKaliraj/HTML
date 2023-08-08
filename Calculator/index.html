@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="input">
+            <input type="text" id="display">
+        </div>
+        <div class="keys">
+            <div class="row1">
+                <div onclick="document.querySelector('#display').value = '';">C</div>
+                <div onclick="document.querySelector('#display').value += '%';">%</div>
+                <div onclick="square()">Sq</div>
+                <div onclick="document.querySelector('#display').value += '/';">/</div>
+            </div>
+            <div class="row2">
+                <div onclick="document.querySelector('#display').value += 7;">7</div>
+                <div onclick="document.querySelector('#display').value += 8;">8</div>
+                <div onclick="document.querySelector('#display').value += 9;">9</div>
+                <div onclick="document.querySelector('#display').value += '*';">x</div>
+            </div>
+            <div class="row3">
+                <div onclick="document.querySelector('#display').value += 4;">4</div>
+                <div onclick="document.querySelector('#display').value += 5;">5</div>
+                <div onclick="document.querySelector('#display').value += 6;">6</div>
+                <div onclick="document.querySelector('#display').value += '-';">-</div>
+            </div>
+            <div class="row4">
+                <div onclick="document.querySelector('#display').value += 1;">1</div>
+                <div onclick="document.querySelector('#display').value += 2;">2</div>
+                <div onclick="document.querySelector('#display').value += 3;">3</div>
+                <div onclick="document.querySelector('#display').value += '+';">+</div>
+            </div>
+            <div class="row5">
+                <div onclick="document.querySelector('#display').value += 0;">0</div>
+                <div onclick="document.querySelector('#display').value += '.';">.</div>
+                <div onclick="calc()">=</div>
+                <div onclick="document.querySelector('#display').value += '❤️';">❤️</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calc() {
+            var value  = document.querySelector('#display').value;
+            var result = eval(value);
+            document.querySelector('#display').value = result;
+        }
+        function square() {
+            var value  = document.querySelector('#display').value;
+            var result = value**2;
+            document.querySelector('#display').value = result;
+        }
+    </script>
+</body>
+</html>
